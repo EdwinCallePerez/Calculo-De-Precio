@@ -18,14 +18,14 @@ function mostrarDetalles(ventana) {
             aluminio4: 0.8 + 0.8
         },
         "B": {
-            img: "ventana_b.jpg", // Agrega aquí la URL de la imagen de la ventana
+            img: "imagenes/ventana_b.jpeg", // Agrega aquí la URL de la imagen de la ventana
             aluminio1: (1.5 + 1.5) + (0.94 + 0.94), 
             aluminio2: (0.65 + 0.65) + (0.65 + 0.65),
             aluminio3: 0.65 + 0.65,
             aluminio4: 0.8 + 0.8
         },
         "C": {
-            img: "ventana_c.jpg", // Agrega aquí la URL de la imagen de la ventana
+            img: "imagenes/ventana_c.jpeg", // Agrega aquí la URL de la imagen de la ventana
             aluminio1: (1.5 + 1.5) + (0.94 + 0.94), 
             aluminio2: (0.65 + 0.65) + (0.65 + 0.65),
             aluminio3: 0.65 + 0.65,

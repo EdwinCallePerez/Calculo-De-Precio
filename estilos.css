@@ -131,3 +131,19 @@ main {
         justify-content: center;
     }
 }
+#imagenVentana {
+    width: 8cm;
+    height: 5cm;
+    object-fit: cover; /* Para que no se deforme la imagen */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+}
+
+/* Ajustes para móviles */
+@media (max-width: 600px) {
+    #imagenVentana {
+        width: 90%; /* Que use el 90% del ancho disponible en el celular */
+        height: auto; /* Mantener proporciones en pantallas chicas */
+    }
+}
