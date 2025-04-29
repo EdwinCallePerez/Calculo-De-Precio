@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carpintería de Aluminio</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+<header>
+    <h1>Carpintería de Aluminio</h1>
+</header>
+
+<nav class="menu">
+    <button onclick="mostrarFormulario('formulario1')">Lista de Ventanas</button>
+    <button onclick="mostrarFormulario('formulario2')">Crear Nueva Ventana</button>
+    <button onclick="mostrarFormulario('formulario3')">Instrucciones</button>
+</nav>
+
+<main>
+    <!-- Formulario 1: Lista de ventanas -->
+    <section id="formulario1" class="formulario">
+        <h2>Lista de Ventanas</h2>
+        <div class="lista-ventanas">
+            <div class="ventana">
+                <p><strong>Ventana A:</strong> 1.20m x 1.00m</p>
+                <button onclick="mostrarDetalles('A')">Más detalles</button>
+            </div>
+            <div class="ventana">
+                <p><strong>Ventana B:</strong> 1.50m x 1.20m</p>
+                <button onclick="mostrarDetalles('B')">Más detalles</button>
+            </div>
+            <div class="ventana">
+                <p><strong>Ventana C:</strong> 2.00m x 1.50m</p>
+                <button onclick="mostrarDetalles('C')">Más detalles</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formulario 2: Crear nueva ventana -->
+    <section id="formulario2" class="formulario">
+        <h2>Crear Nueva Ventana</h2>
+        <form id="formularioNuevaVentana">
+            <label for="ancho">Ancho (m):</label><br>
+            <input type="number" id="ancho" name="ancho" step="0.01" required><br><br>
+
+            <label for="alto">Alto (m):</label><br>
+            <input type="number" id="alto" name="alto" step="0.01" required><br><br>
+
+            <button type="submit">Calcular Materiales</button>
+        </form>
+
+        <div id="resultado" style="margin-top: 2rem;"></div>
+    </section>
+
+    <!-- Formulario 3: Instrucciones -->
+    <section id="formulario3" class="formulario">
+        <h2>Instrucciones</h2>
+        <ul style="margin-top: 1rem; font-size: 1.1rem; line-height: 1.6;">
+            <li>Introduce las medidas de la ventana (ancho y alto) en metros.</li>
+            <li>Presiona "Calcular Materiales" para ver cuánto aluminio y vidrio necesitas.</li>
+            <li>El perímetro del aluminio se calcula multiplicando el contorno por 2 (considerando marcos doble).</li>
+            <li>El área del vidrio es simplemente ancho x alto.</li>
+        </ul>
+    </section>
+
+    <!-- Detalles de la ventana -->
+    <section id="detallesVentana" class="formulario" style="display: none;">
+        <h2>Detalles de la Ventana</h2>
+        <img id="imagenVentana" src="" alt="Imagen de la ventana" style="width: 100%; max-width: 500px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); margin-bottom: 1rem;">
+        <div id="resultadosAluminio">
+            <p><strong>Aluminio #1:</strong> <span id="aluminio1"></span> metros</p>
+            <p><strong>Aluminio #2:</strong> <span id="aluminio2"></span> metros</p>
+            <p><strong>Aluminio #3:</strong> <span id="aluminio3"></span> metros</p>
+            <p><strong>Aluminio #4:</strong> <span id="aluminio4"></span> metros</p>
+        </div>
+    </section>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
